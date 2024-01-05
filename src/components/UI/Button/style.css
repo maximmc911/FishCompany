@@ -1,0 +1,29 @@
+.danger, .other, .registr,
+.login, .buy, .sent{
+    padding: 10px;
+    border-radius: 15px;
+    border: none;
+    font-size: 18px;
+    font-weight: 600;
+    font-style: italic;
+
+}
+.danger{
+    background:red;
+}
+.other{
+    background: aqua;
+}
+.registr{
+    background: blue;
+}
+.login{
+    background: green;
+}
+.buy{
+    background: teal;
+
+}
+.sent{
+    background: yellow;
+}
