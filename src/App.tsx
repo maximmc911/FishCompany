@@ -1,22 +1,24 @@
-import { Button } from "./components/UI/Button/Button"
+/* import { Button } from "./components/UI/Button/Button" */
 import { Input } from "./components/UI/Input/Input"
 
 
 
 const App = () => {
+
+
   return (
     <>
-<Input idText={1}/>
-<Input idText={2}/>
-<div className="flex justify-center gap-16 m-6">
-  
-<Button nameBTN={`Удалить`}/>
-<Button nameBTN={`Зарегистрироваться`}/>
-<Button nameBTN={`хрень полная`}/>
-<Button nameBTN={`Войти`}/>
-<Button nameBTN={`Купить`}/>
-<Button nameBTN={`Отправить`}/>
-</div>
+      <Input idText={`qua`} />
+      <Input idText={`pool1`} />
+      <Input idText={`pool`} />
+      <Input idText={`fish1`} />
+      <Input idText={`qua2`} />
+      <Input idText={`sss`} />
+      <Input idText={`qua1`} />
+      <div className="flex justify-center gap-16 m-6" >
+
+      </div>
+
     </>
   )
 }
