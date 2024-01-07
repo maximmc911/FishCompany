@@ -10,7 +10,7 @@ export const Input = ({ idText }: any) => {
   return (
     <>
       {!(WriteForm(idText).length == 0) ?
-        (<div className="">
+        (<div className="" key={WriteForm(idText)[0].id}>
           <p className='pb-2 ml-1'>{WriteForm(idText)[0].nameInput}</p>
           <FormControl sx={{ m: 1, width: '35ch' }} variant="outlined">
             <OutlinedInput
@@ -32,7 +32,7 @@ export const Input = ({ idText }: any) => {
           </FormControl>
 
         </div>) :
-        <p>При разработке допущена ошибка</p>
+        <p className='w-48 p-3 bg-red-400 rounded-sm'>При разработке допущена ошибка</p>
       }
     </>
   )

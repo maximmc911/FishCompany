@@ -149,5 +149,22 @@ export const textInput: Array<textForm> = [
     input_article: `fish2`,
   },
   //!Корм
-  /*   {id:19, unit: `₽`, nameInput: `Введите количество малька, в шт:`, category: `food`, placeholder: `Количество малька ...`, input_article:`fish3`}, */
+    {id:20, unit: `₽`, nameInput: `Введите стоимость корма за 1 кг:`, 
+  category: `food`, placeholder: `Стоимость корма ...`, input_article:`food`},
+    {id:21, unit: `₽`, nameInput: `Введите стоимость корма за 1 мешок:`, 
+  category: `food`, placeholder: `Стоимость корма ...`, input_article:`food1`},
+    {id:22, unit: `кг`, nameInput: `Введите вес мешка:`, 
+  category: `food`, placeholder: `Вес мешка ...`, input_article:`food2`},
+
+  //! коммунальные расходы
+  {id:23, unit: `₽`, nameInput: `Стоимость электроэнергии:`, 
+  category: `expenses`, placeholder: `Цена за 1 кВт `, input_article:`exp`},
+  {id:24, unit: `₽`, nameInput: `Стоимость аренды за м²:`, 
+  category: `expenses`, placeholder: `Цена за 1 м² `, input_article:`exp1`},
+  {id:25, unit: `₽`, nameInput: `Стоимость аренды за все помещение:`, 
+  category: `expenses`, placeholder: `Стоимость аренды `, input_article:`exp2`},
+  {id:26, unit: `₽`, nameInput: `Стоимость покупки помещения:`, 
+  category: `expenses`, placeholder: `Стоимость ... `, input_article:`exp3`},
+  {id:27, unit: `₽`, nameInput: `Стоимость водоснабжения за 1  м³:`, 
+  category: `expenses`, placeholder: `Стоимость за 1 м³ `, input_article:`exp3`},
 ];

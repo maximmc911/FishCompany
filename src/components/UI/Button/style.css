@@ -1,9 +1,9 @@
 .danger, .other, .registr,
 .login, .buy, .sent{
-    padding: 10px;
-    border-radius: 15px;
+    padding: 5px;
+    border-radius: 5px;
     border: none;
-    font-size: 18px;
+    font-size: 14px;
     font-weight: 600;
     font-style: italic;
 
