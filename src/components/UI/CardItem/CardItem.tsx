@@ -2,9 +2,13 @@ import { useState } from "react";
 import { FaPlus } from "react-icons/fa";
 import { FaMinus } from "react-icons/fa";
 import { Button } from "../Button/Button";
+import { Modal } from 'antd';
 import image from '../../../../public/sumatranskij-barbus-2.jpg'
+
 const CardItem = () => {
     const [Quantity, setQuantity] = useState <number>(1)
+    const [modal, setModal] = useState <boolean>(false)
+ 
     const HandleIncrement = () : void =>{
         setQuantity((e) => e+=1)
     }
@@ -14,6 +18,18 @@ const CardItem = () => {
             
         }
     }
+    function showModal() {
+      setModal(true);
+      
+    }
+    
+      /* const showModalWindow = () => {
+      }; */
+    
+      const hideModal = () => {
+        setModal(false);
+   
+      };
   return (
     <>
     <div className="m-40 rounded-sm shadow-lg bg-slate-200 w-60">
@@ -21,7 +37,7 @@ const CardItem = () => {
         <div className="flex items-center justify-around p-4">
             <div className="">
         <p>200  <span>₽<span> за 1 шт.</span></span> </p>
-        <p className="pt-5 underline cursor-pointer">Подробнее</p>
+        <p className="pt-5 underline cursor-pointer" onClick={showModal} >Подробнее</p>
                 
             </div>
             <div className="">
@@ -49,6 +65,17 @@ const CardItem = () => {
         </div>
     
     </div>
+    <Modal
+        title="Modal"
+        open={modal}
+        onOk={hideModal}
+        onCancel={hideModal}
+        okText="Понятно"
+        cancelText="Отмена"
+        okType='default'
+      >
+        <p>Bla bla ...</p>
+      </Modal>
     </>
   )
 }
