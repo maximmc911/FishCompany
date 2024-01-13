@@ -109,7 +109,6 @@ const FormInput = ({children}) => {
           /* label="Multiline" */
           multiline
           rows={5}
-          maxRows={10}
           size='medium'
           placeholder='Введите ваш вопрос или опишите предложение'
         /*   defaultValue="Default Value" */

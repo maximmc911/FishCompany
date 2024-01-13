@@ -32,7 +32,7 @@ const CardItem = () => {
       };
   return (
     <>
-    <div className="m-40 rounded-sm shadow-lg bg-slate-200 w-60">
+    <div className="rounded-sm shadow-lg  bg-slate-200 w-60">
         <img src={image} alt=""  className="p-4 rounded-sm shadow-lg w-60"/>
         <div className="flex items-center justify-around p-4">
             <div className="">

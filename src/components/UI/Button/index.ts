@@ -16,6 +16,7 @@ export function conrolBtn(params:string) : string  {
       case `Отправить`:
           style = `sent`
           break;
+   
     
       default:
           style = `other`

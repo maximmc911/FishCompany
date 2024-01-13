@@ -25,3 +25,14 @@ export interface universalTypeSelect {
   id: number,
   name: string,
 }
+interface menu {
+  id: number,
+  name: string,
+}
+export interface mainNavbar{
+  id: number,
+  name: string,
+  pages? : Array<menu> | null,
+  menu? : boolean | null,
+  
+}
