@@ -7,6 +7,7 @@ import Badge from '@mui/material/Badge';
 import { RiMenuUnfoldFill } from "react-icons/ri";
 import NavbarMobile from './NavbarMobile';
 import { useState } from 'react';
+import {  NavLink } from 'react-router-dom';
 const Navbar = () => {
   const [open, setOpen] = useState<boolean>(false)
   const HandleOpenMenu = (): void =>{
@@ -17,15 +18,22 @@ const Navbar = () => {
     <div className="flex items-center justify-around w-full bg-blue-800">
         <div className="flex items-center gap-2 p-2">
             <img src={logo} alt="logo" className='h-10 ' />
-            <p>logo</p>
+           
         </div>
         <div className="flex items-center gap-10">
             {mainNavbar.map((e) =>
             <div className="" key={e.id} >
+          <NavLink to={e.route}>
+            
                 <p className='text-xl'>{e.name}</p>             
+          </NavLink>
+                
+          
             </div>
             )}
         </div>
+        <NavLink to='basket'>
+          
         <div className="">
             
              <Stack spacing={1} direction="row" sx={{ color: 'action.active' }}>
@@ -37,6 +45,7 @@ const Navbar = () => {
       </Badge>
       </Stack>
         </div>
+        </NavLink>
        <div className="" onClick={HandleOpenMenu}>
        <div className="animate-pulse">
         <RiMenuUnfoldFill 

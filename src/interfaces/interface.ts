@@ -28,10 +28,12 @@ export interface universalTypeSelect {
 interface menu {
   id: number,
   name: string,
+  router: string,
 }
 export interface mainNavbar{
   id: number,
   name: string,
+  route: string,
   pages? : Array<menu> | null,
   menu? : boolean | null,
   

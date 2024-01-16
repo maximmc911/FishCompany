@@ -2,79 +2,95 @@ import {mainNavbar} from '../../interfaces/interface'
 export const mainNavbar : Array <mainNavbar>=[
     {
         id: 1,
-        name: `главная`
+        name: `Главная`,
+        route:`/`
     },
     {
     id: 2,
-    name: `каталог`
+    name: `Магазин`,
+    route:`shop`
     },
     {
     id: 3,
-    name: `О нас`
+    name: `Сотрудничество`,
+    route:`cooperation`
     },
     {
     id: 4,
-    name: `Сотрудничество`
-    }
+    name: `Полезное`,
+    route:`useful`
+    },
 ];
-export const mainNavbarMobile : Array <mainNavbar>=[
+/* export const mainNavbarMobile : Array <mainNavbar>=[
     {
         id: 1,
         menu: false,
-        name: `главная`
+        name: `главная`,
+        route:'/',
     },
     {
     id: 2,
     menu: true,
     name: `каталог`,
+    route:'/',
     pages: [
         {
             id: 1,
-            name: `example`
+            name: `example`,
+            route:'/',
         },
         {
             id: 2,
-            name: `example2`
+            name: `example2`,
+            route:'/',
         },
         {
             id: 3,
-            name: `example3`
+            name: `example3`,
+            route:'/',
         },
     ]
     },
     {
     id: 3,
     menu: false,
+            route:'/',
     name: `О нас`
     },
     {
     id: 4,
-    menu: false,
+    menu: false,,
+            route:'/',
     name: `Сотрудничество`
     },
     {
     id: 5,
     name: `Корзина`,
-    menu: false,
+    menu: false,,
+            route:'/',
     },
     {
     id: 6,
     name: `Корзина`,
     menu: true,
+    route:'/',
     pages: [
         {
             id: 1,
-            name: `example`
+            name: `example`,
+                    route:'/',
         },
         {
             id: 2,
-            name: `example2`
+            name: `example2`,
+                    route:'/',
         },
         {
             id: 3,
-            name: `example3`
+            name: `example3`,
+                    route:'/',
         },
     ]
     }
 
-];
+]; */

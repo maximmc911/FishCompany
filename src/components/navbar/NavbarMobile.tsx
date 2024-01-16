@@ -1,12 +1,12 @@
 import{  useEffect, useState } from 'react'
 import s from './style.module.css'
-import {mainNavbarMobile} from './index'
+/* import {mainNavbarMobile} from './index' */
 const NavbarMobile = ({open, children}: any) => {
   const [open1, setOpen1] = useState<boolean>(false)
+  const mainNavbarMobile = []
   useEffect(() => {
    setOpen1(false)
   }, [open])
-  
   const HandleOpenMenu = (): void =>{
     setOpen1(!open1)
   }
