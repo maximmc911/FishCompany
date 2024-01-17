@@ -1,9 +1,10 @@
 import{  useEffect, useState } from 'react'
 import s from './style.module.css'
-/* import {mainNavbarMobile} from './index' */
+import {mainNavbar} from './index'
 const NavbarMobile = ({open, children}: any) => {
   const [open1, setOpen1] = useState<boolean>(false)
   const mainNavbarMobile = []
+  mainNavbarMobile.push(...mainNavbar)
   useEffect(() => {
    setOpen1(false)
   }, [open])
