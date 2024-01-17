@@ -1,5 +1,5 @@
 
-import Breadcrumbmenu from '../../../../components/UI/Breadcrumb/Breadcrumb'
+import Breadcrumbmenu from '../../../../components/UI/Navigation/Breadcrumb/Breadcrumb'
 import CategoryItem from '../../../../components/UI/CardItem/CategoryItem'
 
 const Shop = () => {

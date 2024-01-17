@@ -1,15 +1,15 @@
-import { useState } from "react"
+import * as React from 'react';
 import Box from '@mui/material/Box';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
+import CardItem from '../../components/UI/CardItem/CardItem';
+import CalcDraw from '../../components/calc/CalcDraw/CalcDraw';
+import CategoryItem from '../../components/UI/CardItem/CategoryItem';
 
-import Calculation from "./pages/Calculation";
-import Library from "./pages/Library";
-import Forum from "./pages/Forum";
+export default function TabsNavigation({childhen}: any) {
+  const [value, setValue] = React.useState(0);
 
-const useful = () => {
-  const [value, setValue] = useState(1);
-  const handleChange = (_event: React.SyntheticEvent, newValue: number) => {
+  const handleChange = (event: React.SyntheticEvent, newValue: number) => {
     setValue(newValue);
   };
   console.log(value);
@@ -22,26 +22,22 @@ const useful = () => {
         <Tab label="Калькулятор УЗВ" />
         <Tab label="Библиотека" />
         <Tab label="Форум" />
-
       </Tabs>
     </Box>
-    <div className="mt-3">
 { value == 0 ? 
-<Calculation/>
+<CalcDraw/>
 : null
 }
 { value == 1 ? 
-    <Library/>
+    <CardItem/>
 : null
 }
 { value == 2 ? 
-  <Forum/>
+  <CategoryItem/>
 : null
 }
-</div>
+
   
     </>
-  )
+  );
 }
-
-export default useful

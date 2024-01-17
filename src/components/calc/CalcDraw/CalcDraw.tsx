@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import './style.css'
+
 import DrawFigure from './components/DrawFigure'
 import DrawCircle from './components/DrawCircle';
 
