@@ -51,3 +51,10 @@ export const  modulesWord  = {
       ["clean"],
   ],
 };
+
+export interface makeRoutes{
+  id: string,
+  element:  JSX.Element,
+  path: string,
+  pages?: Array<makeRoutes>,
+}

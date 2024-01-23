@@ -1,12 +1,12 @@
 import { useState } from 'react';
 import { Button } from '../../../../components/UI/Button/Button'
 import {  Link } from 'react-router-dom';
-import { Checkbox } from '@mui/material';
-import FormControlLabel from '@mui/material/FormControlLabel';
 import CardItemBasket from './components/CardItemBasket';
-
+import {formatCurrency} from '../../../../mixins/features'
+import Shopping from './Shopping';
 const Basket = () => {
   const [Open, setOpen] = useState<boolean>(false);
+
   const [Example, setExample] = useState <Array<object|string>>([
     {
       id: 1,
@@ -28,25 +28,34 @@ const Basket = () => {
     },
   ])
 
+let n = 0;
+
+for (let index = 0; index < Example.length; index++) {
+  const element = Example[index].price * Example[index].quantity;
+  n+=element
+  
+}
+
+
   const HandleDelete = (e: object | number) =>{
     if (e === 0) {
       setExample([])
-    } else {
-      
+      setOpen(true)
+    } else { 
       setExample(Example.filter(item => item !== e))
+   
+      if ((Example.length-1) == 0) {
+        
+        setOpen(true)
+      }
     }
     
   }
-  const handleChange = () :void =>{
-    setOpen(!Open)
-  }
+ 
+ 
   return (
     <>     
-    {/* Delete start */}
-    <div className="">
-    <FormControlLabel control={<Checkbox checked={Open} onChange={handleChange} name="jason" />} label="Проверка верстки корзины"/>
-    </div>
-    {/* Delete end */}
+
      <h1 className='mt-2 text-2xl text-center'> Корзина</h1>
 
     { Open ? 
@@ -79,24 +88,26 @@ const Basket = () => {
    
     }
     
-      {/*   
-      </CardItemBasket>
-         */}
+      
     
    {!Open ? 
+   <div className="">
+   <h1 className='p-5 text-2xl'> Итого к оплате: <span> {formatCurrency(n)} </span> ₽</h1>
+ 
     <div className="flex justify-end gap-6">
       <div className="" onClick={() => HandleDelete(0)}>
       <Button nameBTN={`Очистить корзину`} />
         
       </div>
-      <div className="" >
+      <Link to='/purchase'> 
       <Button nameBTN={`Оформление заказа`} />
-        
+      </Link>
       </div>
     </div>
    :
    null  
    } 
+
     </>
   )
 }

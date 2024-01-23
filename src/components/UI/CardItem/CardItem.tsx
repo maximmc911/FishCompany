@@ -30,9 +30,14 @@ const CardItem = () => {
         setModal(false);
    
       };
+      
+      const handlePay = () : void =>{
+        console.log(`Куплено ${Quantity} штук`);
+        
+      }
   return (
     <>
-    <div className="rounded-sm shadow-lg  bg-slate-200 w-60">
+    <div className="rounded-sm shadow-lg bg-slate-200 w-60">
         <img src={image} alt=""  className="p-4 rounded-sm shadow-lg w-60"/>
         <div className="flex items-center justify-around p-4">
             <div className="">
@@ -58,7 +63,7 @@ const CardItem = () => {
             </button>
    
         </div>
-        <div className="pt-2">
+        <div className="pt-2" onClick={handlePay}>
             <Button nameBTN={`Купить`}/>
         </div>
             </div>

@@ -1,20 +1,36 @@
-
+import { Route, Routes } from 'react-router-dom'
 import Breadcrumbmenu from '../../../../components/UI/Navigation/Breadcrumb/Breadcrumb'
-import CategoryItem from '../../../../components/UI/CardItem/CategoryItem'
+import { routesShop } from './routes/index'
+import { NavLink } from 'react-router-dom';
+import { useState } from 'react';
+import BestsellerPage from './components/BestsellerPage'
+
 
 const Shop = () => {
+  const [example, setExample] = useState<Array<any>>([
+    { title: <NavLink to='/shop'>Хиты продаж</NavLink> },
+  ])
+  for (let index = 0; index < routesShop.length; index++) {
+    example.push({ title: <NavLink to={routesShop[index].path}>{routesShop[index].id}</NavLink>, })
+  }
+  const setRoutes = () =>
+    routesShop.map(({ id, path, element }) => (
+      <Route key={id} path={path} element={element} />
+    ));
+
   return (
-   <>
-    <h1 className='mt-2 text-2xl text-center'>Магазин</h1>
-    <Breadcrumbmenu/>
-    <div className="flex flex-wrap gap-5 mt-3">
-        <CategoryItem/>
-        <CategoryItem/>
-        <CategoryItem/>
-        <CategoryItem/>
-        <CategoryItem/>
-    </div>
-   </>
+    <>
+      <h1 className='mt-2 text-2xl text-center'>Магазин</h1>
+      <Breadcrumbmenu pages={example} />
+      <Routes>
+        {setRoutes()}
+      </Routes>
+
+      <BestsellerPage />
+
+
+
+    </>
   )
 }
 

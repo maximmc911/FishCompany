@@ -1,30 +1,14 @@
-
 import { Breadcrumb } from 'antd';
 
-const Breadcrumbmenu = () => {
+const Breadcrumbmenu = ({pages}: any) => {
   return (
     <>
-
 <Breadcrumb
-    separator=">"
-    items={[
-      {
-        title: 'Home',
-        href: '/',
-      },
-      {
-        title: 'Application Center',
-        href: '/',
-      },
-      {
-        title: 'Application List',
-        href: '/',
-      },
-      {
-        title: 'An Application',
-        href: '/',
-      },
-    ]}
+
+    separator="|"
+    
+   items={pages}
+   className=''
   />
     </>
   )

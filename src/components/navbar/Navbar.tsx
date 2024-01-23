@@ -1,4 +1,5 @@
 import logo from './image/logo.jpg'
+import { GiCirclingFish } from "react-icons/gi";
 import {mainNavbar} from './index'
 import { SlBasket } from "react-icons/sl";
 import { IoClose } from "react-icons/io5";
@@ -17,7 +18,10 @@ const Navbar = () => {
     <>
     <div className="flex items-center justify-around w-full bg-blue-800">
         <div className="flex items-center gap-2 p-2">
-            <img src={logo} alt="logo" className='h-10 ' />
+        <GiCirclingFish 
+        size='55'
+        color='white'
+        />
            
         </div>
         <div className="flex items-center gap-10">
@@ -37,9 +41,9 @@ const Navbar = () => {
         <div className="">
             
              <Stack spacing={1} direction="row" sx={{ color: 'action.active' }}>
-      <Badge color="info" badgeContent={999999}>
+      <Badge color="info" badgeContent={0}>
       <SlBasket
-      size={20}
+      size={30}
       color='white'
       />
       </Badge>

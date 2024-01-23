@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Button } from '../UI/Button/Button'
 import { FaArrowsRotate } from "react-icons/fa6";
 const RandomGenerator = ({ props }: any) => {

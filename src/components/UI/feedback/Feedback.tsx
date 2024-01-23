@@ -4,6 +4,7 @@ import s from './index.module.css'
 import { useState } from "react";
 import FormInput from "./components/formInput";
 import { Button } from "../Button/Button";
+import RandomGenerator from "../../randomGenerator/RandomGenerator";
  
 
 
@@ -12,7 +13,10 @@ const Feedback = () => {
     const HandleCheck = () =>{
         setOpen(!Open)
     }
-  
+  const HandleCheckCapcha = () : void =>{
+    console.log(`Капча`);
+    
+  }
   return (
     <>
     
@@ -36,10 +40,10 @@ const Feedback = () => {
             
           </div>
        
+            <RandomGenerator/>
           <FormInput>
-            <div onClick={HandleCheck}>
+            <div onClick={HandleCheckCapcha}>
             <Button nameBTN={`Отправить`}/>
-            
             </div>
           </FormInput>
         </div>
