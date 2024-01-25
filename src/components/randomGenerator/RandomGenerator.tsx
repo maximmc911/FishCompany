@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Button } from '../UI/Button/Button'
 import { FaArrowsRotate } from "react-icons/fa6";
-const RandomGenerator = ({ props }: any) => {
+const RandomGenerator = ({ props, children }: any) => {
     const [userNumber, setUserNumber] = useState<number>(0);
     const [PCNumber, setPCNumber] = useState<number>(0);
     const [ExaminationNumber, setExaminationNumber] = useState<boolean>(false);
@@ -79,9 +79,9 @@ const updateGeneratorNumber = (): void =>{
             
             (<div className="flex-col justify-center p-5 rounded-sm shadow-lg w-52 bg-slate-200">
             <p>Вы подтвердили, что не робот!</p>
-            <div className="mt-2" onClick={HandleExamination()}>
-
-<Button nameBTN={`Назад`}  />
+            <div className="mt-2" onClick={() =>HandleExamination}>
+                {children}
+{/* <Button nameBTN={`Назад`}  /> */}
 </div>
             
           

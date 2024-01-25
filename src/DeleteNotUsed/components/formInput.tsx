@@ -44,6 +44,7 @@ const FormInput = ({children}) => {
  
   const onSubmit = (data) => { 
     setData(data)
+    data.name = null;
 
    
     
