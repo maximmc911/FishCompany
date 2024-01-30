@@ -4,10 +4,17 @@ import { FormData, SubmitOrder } from "../../../../interfaces/validationform";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Link } from 'react-router-dom'
 import { Button } from '../../../../components/UI/Button/Button'
-
-
+import { useSelector } from 'react-redux'
+import Check from "./components/Check";
+import { useState } from "react";
+import { useDispatch } from "react-redux";
+import { actions } from "../../../../store/shop/shop.slice";
 const Shopping = () => {
   // constants
+  const [Print, setPrint] = useState<boolean>(false)
+  const {shopFavorite} : any = useSelector(state => state);
+  const dispach = useDispatch();
+
   const {
     register,
     handleSubmit,
@@ -17,19 +24,26 @@ const Shopping = () => {
     resolver: zodResolver(SubmitOrder),
   });
 
+console.log(shopFavorite);
   // functions
   const onSubmit = (data: FormData) => {
     console.log(data);
-    HandleSentCheck()
+    setPrint(true)
   };
-
-
-  const HandleSentCheck = (): void => {
-    window.open(`${window.location.origin}/printCheck`)
+const handleDeleteStore = () : void =>{
+  for (let index = 0; index < shopFavorite.length; index++) {     
+    dispach(actions.toggleFavorites(shopFavorite[index]))
   }
+
+  
+}
+
+
 
   return (
     <>
+    {!Print ?
+    <div className="">
       <div className="flex justify-center">
 
         <form onSubmit={handleSubmit(onSubmit)}>
@@ -79,6 +93,18 @@ const Shopping = () => {
           <Button nameBTN={`Назад`} />
         </Link>
       </div>
+      </div>
+      :(<div className="">
+        
+        <div className="mt-1 " onClick={handleDeleteStore}>
+           <Link to='/'>
+          <Button nameBTN={`Назад`} />
+        </Link>
+        </div>
+        <Check/> 
+      </div>
+      )
+    }
     </>
   )
 }

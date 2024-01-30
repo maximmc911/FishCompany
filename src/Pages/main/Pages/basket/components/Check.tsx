@@ -1,48 +1,28 @@
 import { formatCurrency } from '../../../../../mixins/features'
-import { useState } from 'react'
 import { GiCirclingFish } from "react-icons/gi";
 import { IoMdPrint } from "react-icons/io";
+import { useSelector } from 'react-redux'
+import './index.css'
 const Check = () => {
   // constants
-
-  // Временное использование данных для проверки работоспособности 
-  const [Example, setExample] = useState<Array<object | string>>([
-    {
-      id: 1,
-      name: `барбус`,
-      price: 120,
-      quantity: 10,
-    },
-    {
-      id: 2,
-      name: `бассейн`,
-      price: 12000,
-      quantity: 3,
-    },
-    {
-      id: 30,
-      name: `Насос`,
-      price: 4850,
-      quantity: 13,
-    },
-  ])
-  let n = 0;
+  let total = 0;
+  const {shopFavorite} : any = useSelector(state => state);
 
 
   //cycle
-
-  for (let index = 0; index < Example.length; index++) {
-    const element = Example[index].price * Example[index].quantity;
-    n += element
-
+  for (let index = 0; index < shopFavorite.length; index++) {
+    total += shopFavorite[index].sum;
   }
+
   // functions
+
   const handlePrint = (): void => {
     window.print()
 
   }
   return (
     <>
+    <div className="printStyle">
       <div className="flex justify-center " >
 
         <div className="rounded-sm shadow-lg bg-slate-200 w-72">
@@ -65,19 +45,19 @@ const Check = () => {
             <h1>Количество <span></span></h1>
             <h1>Цена <span></span> </h1>
           </div>
-          {Example.map((item: any, index: any) => (
+          {shopFavorite.map((item: any, index: any) => (
 
             <div className="flex justify-between p-2 border-b-2 border-black" key={index}>
               <h1>{item.name}</h1>
-              <h1>{item.quantity} <span>шт.</span></h1>
-              <h1>{formatCurrency(item.quantity * item.price)} <span>₽</span> </h1>
+              <h1>{item.count} <span>шт.</span></h1>
+              <h1>{formatCurrency(item.price)} <span>₽</span> </h1>
             </div>
 
           ))
           }
           <div className="flex justify-between p-2">
             <h1>Итого:</h1>
-            <h1>{formatCurrency(n)} <span>₽</span></h1>
+            <h1>{formatCurrency(total)} <span>₽</span></h1>
           </div>
           <div className="p-2">
             <div className="flex justify-between">
@@ -96,12 +76,15 @@ const Check = () => {
           <div className="p-2 ">
             <p>* Заявки принимаются с 9 до 18 по МСК. После 18:00 заявки будут обработаны в ближайший рабочий день</p>
             <div className="flex justify-end cursor-pointer" onClick={handlePrint}>
-
+              <div className="printNone">
+                
               <IoMdPrint
                 size={25} />
+                </div>
             </div>
           </div>
         </div>
+      </div>
       </div>
     </>
   )

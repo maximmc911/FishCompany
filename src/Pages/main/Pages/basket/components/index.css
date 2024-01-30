@@ -1,0 +1,11 @@
+ /* Стиль для печати */
+@media print {
+    body, .printNone {
+        visibility: hidden;
+    }
+    
+    .printStyle{
+        visibility: visible;
+        top: 50%;
+     }
+     }

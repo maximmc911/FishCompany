@@ -6,8 +6,8 @@ const CardItemBasket = ({ product, children, index }: any) => {
         <h1 className='p-2 text-base font-medium text-center border-r-2'>{index + 1}</h1>
         <h1 className='p-2 text-base font-medium text-center border-r-2'>Наименование:  <br /> <span > {product.name}</span> </h1>
         <h1 className='p-2 text-base font-medium text-center border-r-2'>Цена: <span> {formatCurrency(product.price)} ₽</span> </h1>
-        <h1 className='p-2 text-base font-medium text-center border-r-2'>Количество: <span>{formatCurrency(product.quantity)} шт.</span> </h1>
-        <h1 className='p-2 text-base font-medium text-center border-r-2'>Стоимость: <span>{formatCurrency(product.quantity * product.price)} ₽</span> </h1>
+        <h1 className='p-2 text-base font-medium text-center border-r-2'>Количество: <span>{formatCurrency(product.count)} шт.</span> </h1>
+        <h1 className='p-2 text-base font-medium text-center border-r-2'>Стоимость: <span>{formatCurrency(product.sum)} ₽</span> </h1>
         {children}
       </div>
     </>

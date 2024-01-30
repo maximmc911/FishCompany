@@ -6,7 +6,7 @@ const BestsellerPage = () => {
       <h1 className='p-5 text-3xl text-center'> Хиты продаж</h1>
       <div className="flex flex-wrap gap-4">
 
-        <CardItem />
+   {/*      <CardItem /> */}
 
       </div>
     </div>

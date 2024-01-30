@@ -10,13 +10,13 @@ import { RiMenuUnfoldFill } from "react-icons/ri";
 import NavbarMobile from './NavbarMobile';
 import { useState } from 'react';
 import {  NavLink } from 'react-router-dom';
+import { useSelector } from "react-redux";
 const Navbar = () => {
   
 // constants
 const [open, setOpen] = useState<boolean>(false)
-
+const {shopFavorite}: any = useSelector(state => state)
 // functions
-
   const HandleOpenMenu = (): void =>{
     setOpen(!open)
   }
@@ -48,7 +48,7 @@ const [open, setOpen] = useState<boolean>(false)
         <div className="">
             
              <Stack spacing={1} direction="row" sx={{ color: 'action.active' }}>
-      <Badge color="info" badgeContent={0}>
+      <Badge color="info" badgeContent={shopFavorite.length}>
       <SlBasket
       size={30}
       color='white'
