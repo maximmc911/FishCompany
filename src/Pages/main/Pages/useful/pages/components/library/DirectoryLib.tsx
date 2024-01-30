@@ -3,14 +3,20 @@ import ReadingLib from './ReadingLib'
 import s from './index.module.css'
 
 const DirectoryLib = ({children, open} : any) => {
+  // constants
     const [Read, setRead] = useState <string | object>(``);
     const [Open, setOpen] = useState <boolean>(false);
-   useEffect(() => {
+    
+  // hooks
+  useEffect(() => {
      setOpen(!Open)
    }, [open])
    
-    const HandleRead = () : void =>{
-      setOpen(!Open);
+   // functions
+   
+   const HandleRead = () : void =>{
+     setOpen(!Open);
+     // Временное использование данных для проверки работоспособности 
         setRead({
             name: `Пример работы библиотеки`,
             text: `<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque eveniet ipsum maxime, sequi natus, harum ut vel nihil ducimus ratione enim voluptas, cumque sunt nesciunt asperiores corrupti. At, eaque inventore!

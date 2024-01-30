@@ -1,33 +1,5 @@
-/* .feedback{
-  
-}
-.label{
-    position: absolute;
-
-    left: 96%;
-    top: 50%;
-    right: 0;
-    bottom:0;
-    width: 40px;
-    padding: 5px;
-   height: 50px;
-    
-background: rgb(22 163 74);
-border: none;
-
-border-top-left-radius: 10px;
-border-bottom-left-radius: 10px;
-}
-.window{
-    display: none;
-    background: rgb(22 163 74);
-    width: 350px;
-    top: 10px;
-    height: 50px;
-} */
 .label{
     position: fixed;
-  /*   width: 50px; */
     bottom: 20%;
     filter:opacity(40%);
     right: 5%;

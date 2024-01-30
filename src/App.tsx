@@ -4,19 +4,19 @@ import Footer from "./components/footer/Footer"
 import './style/style.css'
 
 const App = () => {
-  
-  
+
+// functions
   const setRoutes = () =>
     routes.map(({ id, path, element, pages }) => (
       <Route key={id} path={path} element={element} >
-        { pages?.map(({ id, path, element, pages }) => (
+        {pages?.map(({ id, path, element, pages }) => (
           <Route key={id} path={path} element={element} >
-           {  pages?.map(({ id, path, element }) => (
+            {pages?.map(({ id, path, element }) => (
               <Route key={id} path={path} element={element} />))
             }
-            </Route>
+          </Route>
         ))}
-        </Route>
+      </Route>
     ));
 
   return (
@@ -25,9 +25,9 @@ const App = () => {
       <div className="content">
 
         <Routes>
-        {
-          setRoutes()
-        }
+          {
+            setRoutes()
+          }
         </Routes>
       </div>
       <div className="footer">

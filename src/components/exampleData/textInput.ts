@@ -1,4 +1,7 @@
 import { textForm } from "../../interfaces/interface";
+
+// Массив объектов для заполнения данными input
+
 export const textInput: Array<textForm> = [
   //! Габариты помещения
   {

@@ -1,6 +1,8 @@
 import {FormFieldProps} from '../../../interfaces/validationform'
 import './style.css'
 
+// ф-ция возвращает Input для форм обратной связи и/или регистрации
+
 const FormField: React.FC<FormFieldProps> = ({
   type,
   placeholder,

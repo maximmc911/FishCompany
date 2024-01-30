@@ -1,15 +1,17 @@
 import { Breadcrumb } from 'antd';
 
-const Breadcrumbmenu = ({pages}: any) => {
+// Использую как навигационное меню в разделе магазин
+
+const Breadcrumbmenu = ({ pages }: any) => {
   return (
     <>
-<Breadcrumb
+      <Breadcrumb
 
-    separator="|"
-    
-   items={pages}
-   className=''
-  />
+        separator="|"
+
+        items={pages}
+        className=''
+      />
     </>
   )
 }

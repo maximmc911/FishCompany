@@ -1,8 +1,8 @@
 import ShopPages from "../components/ShopPages";
-import { makeRoutes} from '../../../../../interfaces/interface'
-export const routesShop : Array< makeRoutes> = [
-    { id: "Пресноводные рыбы", path: `river_fish`, element: <ShopPages props={`Каталог пресноводных аквариумных рыб `}/>, pages:[] },
-  
+import { makeRoutes } from '../../../../../interfaces/interface'
+export const routesShop: Array<makeRoutes> = [
+    { id: "Пресноводные рыбы", path: `river_fish`, element: <ShopPages props={`Каталог пресноводных аквариумных рыб `} />, pages: [] },
+
 ]
 
 /*

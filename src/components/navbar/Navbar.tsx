@@ -1,6 +1,7 @@
-import logo from './image/logo.jpg'
+
+import { FaKey } from "react-icons/fa";
 import { GiCirclingFish } from "react-icons/gi";
-import {mainNavbar} from './index'
+import {MainNavbar, mainNavbarMobile} from './index'
 import { SlBasket } from "react-icons/sl";
 import { IoClose } from "react-icons/io5";
 import Stack from '@mui/material/Stack';
@@ -10,10 +11,16 @@ import NavbarMobile from './NavbarMobile';
 import { useState } from 'react';
 import {  NavLink } from 'react-router-dom';
 const Navbar = () => {
-  const [open, setOpen] = useState<boolean>(false)
+  
+// constants
+const [open, setOpen] = useState<boolean>(false)
+
+// functions
+
   const HandleOpenMenu = (): void =>{
     setOpen(!open)
   }
+  
   return (
     <>
     <div className="flex items-center justify-around w-full bg-blue-800">
@@ -25,7 +32,7 @@ const Navbar = () => {
            
         </div>
         <div className="flex items-center gap-10">
-            {mainNavbar.map((e) =>
+            {MainNavbar.map((e) =>
             <div className="" key={e.id} >
           <NavLink to={e.route}>
             
@@ -50,8 +57,17 @@ const Navbar = () => {
       </Stack>
         </div>
         </NavLink>
+        <NavLink to='partner_login'>
+        <div className="flex gap-1">
+      <FaKey 
+       size={25}
+       color='white'
+       />
+       <p className="text-white">вход</p> 
+       </div>
+       </NavLink>
        <div className="" onClick={HandleOpenMenu}>
-       <div className="animate-pulse">
+       <div className="cursor-pointer animate-pulse">
         <RiMenuUnfoldFill 
          size={25}
          color='white'
@@ -59,14 +75,33 @@ const Navbar = () => {
         </div>
         </div>
     </div>
+    
+    
     <NavbarMobile open={open}>
       <div className="flex justify-end p-2 bg-blue-200 "  onClick={HandleOpenMenu} >
-      <div className="animate-bounce">
+      <div className="cursor-pointer animate-bounce">
       <IoClose 
           size={35}
           color='red'
       />
         </div>  
+      </div>
+      <div className="flex justify-center w-full h-screen bg-blue-200 ">
+      <div className="flex-col gap-16 ">
+        
+    {mainNavbarMobile.map((e) =>
+            <div className="" key={e.id} onClick={HandleOpenMenu} >
+              <NavLink to={e.route}>
+                
+                 <p className='p-1 text-2xl' >{e.name}</p> 
+              </NavLink>
+                 </div>
+              )}
+               
+          
+            </div>
+          
+          
       </div>
     </NavbarMobile>
     </>

@@ -3,9 +3,14 @@ import InputAdornment from '@mui/material/InputAdornment';
 import OutlinedInput from '@mui/material/OutlinedInput';
 import { WriteForm } from './InputText.ts'
 import { useState } from 'react';
+
+// Input для калькулятора
+
 export const Input = ({ idText }: any) => {
-  const [Example, setExample] = useState<Array<any>>([]);
-  console.log(Example);
+   // constants
+   const [Example, setExample] = useState<Array<any>>([]);
+   // functions
+ 
 
   return (
     <>

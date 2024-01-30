@@ -1,4 +1,8 @@
-import { RiverFish } from "../../interfaces/interface";
+import { RiverFish, universalTypeSelect } from "../../interfaces/interface";
+
+ //! Заполнение select данными о виде рыбы
+
+
 export const riverFish: Array<RiverFish> = [
   {
     id: 1,
@@ -45,4 +49,16 @@ export const riverFish: Array<RiverFish> = [
     stocking_density: 60,
     growing_time: 8,
   },
+];
+
+ //! Заполнение select данными о помещении
+export const selectQuarters: Array<universalTypeSelect> = [
+  {
+   id: 1,
+   name: `Аренда помещения`,
+ },
+ {
+   id: 2,
+   name: `Покупка помещения`,
+ },
 ];

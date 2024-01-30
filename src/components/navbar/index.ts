@@ -1,5 +1,7 @@
 import {mainNavbar} from '../../interfaces/interface'
-export const mainNavbar : Array <mainNavbar>=[
+
+// Привязка роутинга к  навбару (дестоп) //! Пользовательская версия 
+export const MainNavbar : Array <mainNavbar>=[
     {
         id: 1,
         name: `Главная`,
@@ -21,76 +23,38 @@ export const mainNavbar : Array <mainNavbar>=[
     route:`useful`
     },
 ];
-/* export const mainNavbarMobile : Array <mainNavbar>=[
+
+// Привязка роутинга к  навбару (мобилка) //! Пользовательская версия 
+
+export const  mainNavbarMobile : Array <mainNavbar>=[
     {
         id: 1,
-        menu: false,
-        name: `главная`,
-        route:'/',
+        name: `Главная`,
+        route:`/`
     },
     {
     id: 2,
-    menu: true,
-    name: `каталог`,
-    route:'/',
-    pages: [
-        {
-            id: 1,
-            name: `example`,
-            route:'/',
-        },
-        {
-            id: 2,
-            name: `example2`,
-            route:'/',
-        },
-        {
-            id: 3,
-            name: `example3`,
-            route:'/',
-        },
-    ]
+    name: `Магазин`,
+    route:`shop`
     },
     {
     id: 3,
-    menu: false,
-            route:'/',
-    name: `О нас`
+    name: `Сотрудничество`,
+    route:`cooperation`
     },
     {
     id: 4,
-    menu: false,,
-            route:'/',
-    name: `Сотрудничество`
+    name: `Полезное`,
+    route:`useful`
     },
     {
     id: 5,
     name: `Корзина`,
-    menu: false,,
-            route:'/',
+    route:`basket`
     },
     {
     id: 6,
-    name: `Корзина`,
-    menu: true,
-    route:'/',
-    pages: [
-        {
-            id: 1,
-            name: `example`,
-                    route:'/',
-        },
-        {
-            id: 2,
-            name: `example2`,
-                    route:'/',
-        },
-        {
-            id: 3,
-            name: `example3`,
-                    route:'/',
-        },
-    ]
-    }
-
-]; */
+    name: `Вход для партнеров`,
+    route:`partner_login`
+    },
+];

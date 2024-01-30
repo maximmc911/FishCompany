@@ -1,4 +1,5 @@
-import { Box } from '@mui/material';
+//! Example or bad code
+/* import { Box } from '@mui/material';
 import TextField from '@mui/material/TextField';
 import { useState } from 'react';
 import { Controller } from "react-hook-form";
@@ -13,10 +14,10 @@ type Inputs = {
   telRequired: string,
   emailRequired: string,
   messageRequired: string,
-  /* nameRequired: string, */
+  nameRequired: string,
   example: string
 exampleRequired: string,
-}
+} */
 /*! example
 
       /* "handleSubmit" will validate your inputs before invoking "onSubmit" */
@@ -32,7 +33,7 @@ exampleRequired: string,
     </form>
 */
      
-const FormInput = ({children}) => {
+/* const FormInput = ({children}) => {
   const [data, setData] = useState("");
  
   const {
@@ -52,11 +53,11 @@ const FormInput = ({children}) => {
    
  }
 
- console.log(data);
+ console.log(data); */
  
   /* console.log(watch("example")) */ // watch input value by passing the name of it
 
-
+/* 
   return (
     <>
        <div className="flex flex-col items-center gap-2">
@@ -65,7 +66,7 @@ const FormInput = ({children}) => {
     className="w-5/6 bg-green-300"
     {...register("name", { required: true })}
           id="outlined-textarea"
-        /*   label="Multiline Placeholder" */
+          label="Multiline Placeholder"
           placeholder="Ваше имя"
           multiline
           
@@ -76,7 +77,7 @@ const FormInput = ({children}) => {
     className="w-5/6 bg-green-300"
     {...register("email", { required: true })}
           id="outlined-textarea"
-      /*     label="Multiline Placeholder" */
+          label="Multiline Placeholder"
           placeholder="Почта, прим. example@mail.ru"
           multiline
           
@@ -87,13 +88,13 @@ const FormInput = ({children}) => {
     className="w-5/6 bg-green-300"
     {...register("tel", { required: true })}
           id="outlined-textarea"
-        /*   label="Multiline Placeholder" */
+          label="Multiline Placeholder"
           placeholder="Тел. +7999999999"
           type='number'
           multiline
           
           />
-          {errors.telRequired && <span>This field is required</span>}
+          {errors.telRequired && <span>This field is required</span>} */
       {/*     <Box
       component="form"
       sx={{
@@ -103,19 +104,19 @@ const FormInput = ({children}) => {
       autoComplete="off"
     > */}
 
-          <TextField
+    /*       <TextField
              className="w-5/6 bg-green-300"
              {...register("message", { required: true })}
           id="outlined-multiline-static"
-          /* label="Multiline" */
+          label="Multiline"
           multiline
           rows={5}
           size='medium'
           placeholder='Введите ваш вопрос или опишите предложение'
-        /*   defaultValue="Default Value" */
-        />
+          defaultValue="Default Value"
+        /> */
       {/*       </Box> */}
-          {errors.messageRequired && <span>This field is required</span>}
+ /*          {errors.messageRequired && <span>This field is required</span>}
           <form onSubmit={handleSubmit(onSubmit)}>     
       
           {children}
@@ -123,6 +124,6 @@ const FormInput = ({children}) => {
       </div>
     </>
   )
-}
+} */
 
-export default FormInput
+/* export default FormInput */

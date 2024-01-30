@@ -1,26 +1,28 @@
-export function conrolBtn(params:string) : string  {
-    let style : string;
-    switch (params) {
-      case `Удалить`:
-          style = `danger`
-          break;
-      case `Зарегистрироваться`:
-          style = `registr`
-          break;
-      case `Войти`:
-          style = `login`
-          break;
-      case `Купить`:
-          style = `buy`
-          break;
-      case `Отправить`:
-          style = `sent`
-          break;
-   
+
+//Функция для придания кнопки необходимого стиля, исходя из переданного в кнопку пропса
+export function conrolBtn(params: string): string {
     
-      default:
-          style = `other`
-          break;
-    }
-    return style
+  let style: string;
+  switch (params) {
+    case `Удалить`:
+      style = `danger`;
+      break;
+    case `Зарегистрироваться`:
+      style = `registr`;
+      break;
+    case `Войти`:
+      style = `login`;
+      break;
+    case `Купить`:
+      style = `buy`;
+      break;
+    case `Отправить`:
+      style = `sent`;
+      break;
+
+    default:
+      style = `other`;
+      break;
+  }
+  return style;
 }

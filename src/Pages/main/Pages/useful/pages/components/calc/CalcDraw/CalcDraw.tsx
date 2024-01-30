@@ -4,20 +4,19 @@ import DrawFigure from './components/DrawFigure'
 import DrawCircle from './components/DrawCircle';
 
 const CalcDraw = () => {
+  // constants
   const [first, setfirst] = useState<boolean>(false);
+  // Временное использование данных для проверки работоспособности 
+
   const room_dimensions: Array<number> = [960, 820];
   const arrayRepeat: Array<Number> = [];
   let width: number = 150;
   let height: number = 150;
   let result: number;
 
-  const handleDraw = (): void => {
-    setfirst(!first)
-  }
+  //conditions
 
   if (((width > 0) && (height > 1)) || (width == height)) {
-
-    console.log(`111`);
 
     result = Math.floor((room_dimensions[0] - 24) / (width + 16)) * Math.floor((room_dimensions[1] - 24) / (height + 16));
     for (let index = 0; index < result; index++) {
@@ -34,6 +33,10 @@ const CalcDraw = () => {
 
 
 
+  // functions
+  const handleDraw = (): void => {
+    setfirst(!first)
+  }
 
 
 

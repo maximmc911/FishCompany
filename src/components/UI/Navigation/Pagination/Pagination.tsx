@@ -1,12 +1,12 @@
-
 import Pagination from '@mui/material/Pagination';
-import Stack from '@mui/material/Stack';
 import { useState } from 'react';
 
 export default function PaginationControlled() {
-  const [page, setPage] = useState(1);
-
-  const handleChange = (_event: React.ChangeEvent<unknown>, value: number) => {
+     // constants
+     const [page, setPage] = useState <number>(1);
+     
+     // functions
+  const handleChange = (_event: React.ChangeEvent<unknown>, value: number) : void => {
     setPage(value);
   };
 

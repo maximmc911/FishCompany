@@ -1,3 +1,11 @@
-1) В качестве лого
+В качестве лого
 import { GiCirclingFish } from "react-icons/gi";
 <GiCirclingFish />
+
+
+// constants
+// functions
+// hooks
+//cycle
+// Временное использование данных для проверки работоспособности 
+//conditions

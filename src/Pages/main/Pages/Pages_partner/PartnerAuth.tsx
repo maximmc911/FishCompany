@@ -1,10 +1,10 @@
 import { useForm } from "react-hook-form";
-import FormField from "../../components/UI/formField/FormField";
-import { FormData, UsersAuth } from "../../interfaces/validationform";
+import FormField from "../../../../components/UI/formField/FormField";
+import { FormData, UsersAuth } from "../../../../interfaces/validationform";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Link } from 'react-router-dom'
 
-const AdminAuth = () => {
+const PartnerAuth = () => {
   // constants
   const {
     register,
@@ -17,13 +17,11 @@ const AdminAuth = () => {
 
   // functions
   const onSubmit = (data: FormData) => {
-    console.log(data); // Вывод введенных данных в инпуте
-
-
+    console.log(data);
   };
   return (
     <>
-      <h1 className="m-16 text-2xl font-extrabold text-center">Вход для сотрудников</h1>
+      <h1 className="m-20 text-2xl font-extrabold text-center">Вход для зарегистрированных партнеров</h1>
       <form onSubmit={handleSubmit(onSubmit)} className="relative flex items-center justify-center top-1/2">
         <div className="flex flex-col w-80">
           <FormField
@@ -51,15 +49,14 @@ const AdminAuth = () => {
 
       <div className="flex justify-center gap-2 mt-5">
 
-        <h1 className="mt-2 text-xl text-center">Если вы не являетесь сотрудником нашей компании </h1>
+        <h1 className="mt-2 text-xl text-center">Если вы не являетесь партнером нашей компании </h1>
         <Link to='/'>
           <h1 className="mt-2 text-xl text-center text-blue-600 underline cursor-pointer">Покиньте страницу </h1>
         </Link>
       </div>
 
-
     </>
   )
 }
 
-export default AdminAuth
+export default PartnerAuth

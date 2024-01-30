@@ -1,3 +1,5 @@
+/* Стилизация кнопки исходя из переданного return функции */
+
 .danger, .other, .registr,
 .login, .buy, .sent{
     padding: 5px;

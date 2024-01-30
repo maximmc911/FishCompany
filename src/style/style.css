@@ -1,4 +1,4 @@
-.content{  
-  
+/* Прикрепление footer к нижней части экрана */
+.content{   
     min-height: calc(100vh - 50px);
 }
