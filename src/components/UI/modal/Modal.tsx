@@ -5,7 +5,7 @@ import Modal from '@mui/material/Modal';
 import { useEffect, useState } from 'react';
 
 
-export default function BasicModal({ open, onClose, children }: any) {
+export default function BasicModal({ open,  onClose, children }: any) {
   // constants
   const [Open, setOpen] = useState<boolean>(false);
   // functions
@@ -15,6 +15,7 @@ export default function BasicModal({ open, onClose, children }: any) {
   useEffect(() => {
     setOpen(open)
   }, [open])
+
 
 
 

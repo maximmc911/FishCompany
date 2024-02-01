@@ -9,6 +9,7 @@ import FormField from "../../../components/UI/formField/FormField";
 import { FormData, SubmitQuestion } from "../../../interfaces/validationform";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
+import Icons from "../../icons/Icons";
 
 const Feedback = () => {
   // constants
@@ -59,9 +60,7 @@ const Feedback = () => {
     <>
 
       <div className={Open ? s.label_close : s.label} onClick={HandleCheck}>
-        <RiFeedbackLine
-          size={28}
-        />
+        <Icons props={`диалог`}/>
       </div>
       <div >
 
@@ -70,9 +69,7 @@ const Feedback = () => {
             <div className="flex justify-between pb-2 ">
               <h3 className="text-xl font-semibold ">Обратная связь</h3>
               <div className="cursor-pointer" onClick={HandleCheck} >
-                <IoClose
-                  size={30}
-                />
+                <Icons props={`закрыть`}/>
               </div>
             </div>
             {!OpenChapcha ? <div className="">

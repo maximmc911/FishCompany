@@ -36,6 +36,7 @@ export interface mainNavbar {
   route: string;
   pages?: Array<menu> | null;
   menu?: boolean | null;
+  icons?: string;
 }
 // Константа для работы с фреймворком ReactQuill
 export const modulesWord = {

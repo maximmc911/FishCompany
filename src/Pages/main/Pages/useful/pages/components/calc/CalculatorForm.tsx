@@ -1,3 +1,4 @@
+import CalcDraw from './CalcDraw/CalcDraw'
 import FeedCalculation from './CalcDraw/components/FeedCalculation'
 
 const CalculatorForm = ({ props }: any) => {
@@ -5,6 +6,10 @@ const CalculatorForm = ({ props }: any) => {
     <>
       {props == `Расчет кормов` ?
         <FeedCalculation />
+        : null
+      }
+      {props == `Создание схемы помещения` ?
+        <CalcDraw/>
         : null
       }
 

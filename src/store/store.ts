@@ -1,7 +1,9 @@
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
 import {reducer as shopFavorite} from './shop/shop.slice'
+import {reducer as routesReducer} from '../routes/index'
 const redusers = combineReducers(
-  {shopFavorite: shopFavorite}
+  {shopFavorite: shopFavorite,
+  routesReducer: routesReducer}
 );
 
 export const store = configureStore({

@@ -1,13 +1,15 @@
 import { Route, Routes } from 'react-router-dom'
-import { routes } from './routes'
 import Footer from "./components/footer/Footer"
 import './style/style.css'
+import {useSelector } from 'react-redux'
+
 
 const App = () => {
+  const {routesReducer} : unknown = useSelector(state => state);
 
 // functions
   const setRoutes = () =>
-    routes.map(({ id, path, element, pages }) => (
+  routesReducer.map(({ id, path, element, pages }) => (
       <Route key={id} path={path} element={element} >
         {pages?.map(({ id, path, element, pages }) => (
           <Route key={id} path={path} element={element} >

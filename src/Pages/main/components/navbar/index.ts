@@ -1,4 +1,4 @@
-import {mainNavbar} from '../../interfaces/interface'
+import { mainNavbar } from "../../../../interfaces/interface";
 
 // Привязка роутинга к  навбару (дестоп) //! Пользовательская версия 
 export const MainNavbar : Array <mainNavbar>=[

@@ -3,9 +3,17 @@ import FormField from "../../../../components/UI/formField/FormField";
 import { FormData, UsersAuth } from "../../../../interfaces/validationform";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Link } from 'react-router-dom'
+import { PushPartnerRouting, actions, routes } from "../../../../routes";
+import BasicModal from "../../../../components/UI/modal/Modal";
+import { useState } from "react";
+import ModalContent from "../../../PartnerPages/components/modal/ModalContent";
+import { partnerRoutes } from "../../../PartnerPages/routes";
+import { useDispatch } from "react-redux";
+
 
 const PartnerAuth = () => {
   // constants
+  const [Name, setName] = useState<string>(``)
   const {
     register,
     handleSubmit,
@@ -14,13 +22,24 @@ const PartnerAuth = () => {
   } = useForm<FormData>({
     resolver: zodResolver(UsersAuth),
   });
-
-  // functions
-  const onSubmit = (data: FormData) => {
-    console.log(data);
+const [Open, setOpen] = useState<boolean>(false)
+let open : boolean = false
+const dispach = useDispatch()
+// functions
+const onSubmit = (data: FormData) => {
+  /*     routes.push(...partnerRoutes) */
+  if (true) {        //!Добавить проверки
+    dispach(actions.toggleRoutes(...partnerRoutes))
+    setName(`Максим`)
+    setOpen(true)
+ 
+     }
   };
   return (
     <>
+    <BasicModal open ={Open} >
+      <ModalContent name={Name}/>
+    </BasicModal>
       <h1 className="m-20 text-2xl font-extrabold text-center">Вход для зарегистрированных партнеров</h1>
       <form onSubmit={handleSubmit(onSubmit)} className="relative flex items-center justify-center top-1/2">
         <div className="flex flex-col w-80">

@@ -9,3 +9,16 @@ import { GiCirclingFish } from "react-icons/gi";
 //cycle
 // Временное использование данных для проверки работоспособности 
 //conditions
+
+
+
+Выход
+import { ImExit } from "react-icons/im";
+ <ImExit 
+    color='green'
+    size ={25}
+    />
+Моя страница
+Товары
+Статистика
+Почта
