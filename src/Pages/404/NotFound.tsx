@@ -14,7 +14,7 @@ const NotFound = () => {
       </nav>
       <div className='flex flex-col items-center gap-6 mt-10'>
      
-        <Icons props={`блокировка`}/>
+        <Icons props={`блокировка`} color={`red`}/>
         <h1 className='text-5xl text-center'>404 Not Found</h1>
         <h1 className='text-2xl text-center'>Страница, на которую вы пытаетесь попасть, <br /> отстутствует или еще не создана</h1>
       </div>
