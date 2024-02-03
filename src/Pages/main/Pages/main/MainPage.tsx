@@ -1,12 +1,12 @@
+import Module from "../../../../module"
 
 
-import PagePartner from '../../../PartnerPages/Pages/PagePartner'
+
 
 const MainPage = () => {
   return (
     <>
-<PagePartner/>
-
+<Module/>
 
 
     {/* !CONTENT START  РАЗБЛОКИРОВАТЬ ПО ЗАВЕРШЕНИЮ РАБОТЫ!!!!!! NOT DELETE */}

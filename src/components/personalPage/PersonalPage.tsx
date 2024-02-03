@@ -8,7 +8,7 @@ console.log(partnerInfo);
 
   return (
     <div>
-    <h1 className='p-5 text-2xl'>Личная страница</h1>
+    <h1 className='p-5 text-2xl'>Главная страница</h1>
       <div className="p-2">
 
 <div className="flex flex-wrap gap-12 ">

@@ -38,7 +38,7 @@ const PushImage = () => {
 
   return (
     <>
-
+<div className=" w-12">
 <ConfigProvider
 theme={{
   components:{
@@ -70,6 +70,7 @@ theme={{
       </Upload>
     </ImgCrop>
         </ConfigProvider>
+        </div>
         </>
   );
 };
