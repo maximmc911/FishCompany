@@ -16,6 +16,7 @@ import { GrStatusGood } from "react-icons/gr";
 import { MdOutlineDangerous } from "react-icons/md"; 
 import { FaQuestion } from "react-icons/fa"; 
 import { MdOutlineSettingsBackupRestore } from "react-icons/md";
+import { FaEnvelope } from "react-icons/fa";
 const Icons = ({props, color}: any) => {
   if (color == undefined) {
     color = `white`
@@ -42,6 +43,7 @@ const Icons = ({props, color}: any) => {
     {(props == `отклонено`) ? (  <MdOutlineDangerous size={25} color={color} />) : null } 
     {(props == `вопрос`) ? (  <FaQuestion size={20} color={color} />) : null } 
     {(props == `восстановить`) ? (  <MdOutlineSettingsBackupRestore size={25} color={color} />) : null } 
+    {(props == `почта2`) ? (  <FaEnvelope size={25} color={color} />) : null } 
     
     </>
   )

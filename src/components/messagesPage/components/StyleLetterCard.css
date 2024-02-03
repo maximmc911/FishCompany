@@ -1,0 +1,25 @@
+.read{
+display: flex;
+align-items: center;
+gap: 10px;
+border-radius: 15px;
+padding: 10px;
+cursor: pointer;
+background: #5a70ef;
+}
+.NotActive{
+    font-weight: 700;
+}
+.readYes{
+display: flex;
+align-items: center;
+gap: 10px;
+border-radius: 15px;
+padding: 10px;
+cursor: pointer;
+background: #c9ceed;
+}
+.Active{
+    font-weight: 200;
+}
+
