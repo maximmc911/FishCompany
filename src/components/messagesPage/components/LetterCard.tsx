@@ -1,7 +1,9 @@
+import BasicModal from '../../UI/modal/Modal'
 import Icons from '../../icons/Icons'
+import ModalMessage from './ModalMessage'
 import './StyleLetterCard.css'
 
-const LetterCard = ({read}: any) => {
+const LetterCard = ({read, open}: any) => {
   return (
     <>
     <div className={read ? `readYes` : `read`}>
@@ -17,6 +19,9 @@ const LetterCard = ({read}: any) => {
         <h1 className={read ? `Active` : `NotActive`}>Тема сообщения: <span> Публикация новых товаров</span></h1>
 
     </div>
+    <BasicModal open ={open}>
+      <ModalMessage/>
+    </BasicModal>
     </>
   )
 }
