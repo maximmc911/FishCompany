@@ -9,7 +9,7 @@ import FormField from "../../../components/UI/formField/FormField";
 import { FormData, SubmitQuestion } from "../../../interfaces/validationform";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
-import Icons from "../../icons/Icons";
+import Icons from "../icons/Icons";
 
 const Feedback = () => {
   // constants

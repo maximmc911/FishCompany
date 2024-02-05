@@ -1,7 +1,7 @@
 import NavbarMobile from './NavbarMobile';
 import { JSXElementConstructor, Key, ReactElement, ReactNode, ReactPortal, useState } from 'react';
 import {  NavLink, To } from 'react-router-dom';
-import Icons from "../icons/Icons";
+import Icons from "../UI/icons/Icons";
 const Navbar = ({navMob, children}: any) => {
   
 // constants

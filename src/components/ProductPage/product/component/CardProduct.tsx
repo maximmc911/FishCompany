@@ -4,7 +4,7 @@ import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
-import Icons from '../../../icons/Icons';
+import Icons from '../../../UI/icons/Icons';
 import { formatCurrency } from '../../../../mixins/features';
 
 const CardProduct = ({props, chapter}: any) => {

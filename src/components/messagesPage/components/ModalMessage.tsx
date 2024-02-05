@@ -1,5 +1,5 @@
 import React from 'react'
-import Icons from '../../icons/Icons'
+import Icons from '../../UI/icons/Icons'
 
 const ModalMessage = () => {
   return (

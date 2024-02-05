@@ -1,7 +1,7 @@
 import { FormControlLabel, RadioGroup } from '@mui/material';
 import Radio from '@mui/material/Radio';
 import { useEffect, useState } from 'react';
-import Icons from '../icons/Icons';
+import Icons from '../UI/icons/Icons';
 import LetterCard from './components/LetterCard';
 const IncomingMail = () => {
     const [selectedValue, setSelectedValue] = useState(true);

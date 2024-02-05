@@ -3,7 +3,7 @@ import Feedback from '../../components/UI/feedback/Feedback'
 
 import NavbarMain from '../main/components/navbar/NavbarMain';
 import { mainNavbarMobile } from '../main/components/navbar';
-import Icons from '../../components/icons/Icons';
+import Icons from '../../components/UI/icons/Icons';
 const NotFound = () => {
   return (
     <>

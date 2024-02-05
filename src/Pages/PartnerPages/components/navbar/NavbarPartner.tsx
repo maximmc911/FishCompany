@@ -1,7 +1,7 @@
 import { NavLink } from 'react-router-dom';
 import {partnerNavbar} from './index'
 
-import Icons from '../../../../components/icons/Icons'
+import Icons from '../../../../components/UI/icons/Icons'
 const NavbarMain = () => {
 
 

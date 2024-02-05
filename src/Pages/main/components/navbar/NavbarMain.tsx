@@ -5,7 +5,7 @@ import Badge from '@mui/material/Badge';
 import {  NavLink } from 'react-router-dom';
 import {MainNavbar} from './index'
 import { useSelector } from "react-redux";
-import Icons from "../../../../components/icons/Icons";
+import Icons from "../../../../components/UI/icons/Icons";
 const NavbarMain = () => {
 
     

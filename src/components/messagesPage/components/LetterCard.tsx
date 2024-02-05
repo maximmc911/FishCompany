@@ -1,5 +1,5 @@
 import BasicModal from '../../UI/modal/Modal'
-import Icons from '../../icons/Icons'
+import Icons from '../../UI/icons/Icons'
 import ModalMessage from './ModalMessage'
 import './StyleLetterCard.css'
 
