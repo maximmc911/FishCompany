@@ -17,10 +17,14 @@ import { MdOutlineDangerous } from "react-icons/md";
 import { FaQuestion } from "react-icons/fa"; 
 import { MdOutlineSettingsBackupRestore } from "react-icons/md";
 import { FaEnvelope } from "react-icons/fa";
-const Icons = ({props, color}: any) => {
+const Icons = ({props, color, size}: any) => {
   if (color == undefined) {
     color = `white`
   }
+ /*  if (size == undefined) {
+    console.log(`Добавление размера Иконок`);
+    
+  } */
 
 
   return (

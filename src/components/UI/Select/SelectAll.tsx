@@ -14,6 +14,8 @@ export const SelectAll = ({ props }: any) => {
   const [ResultFish, setResultFish] = useState<object | string>(``);
   const [ResultQuarters, setResultQuarters] = useState<object | string>(``);
 
+console.log(HandleSelestCalc(props));
+
   // functions
 
   const handleChange = (event: object | any) => {

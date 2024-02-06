@@ -45,7 +45,7 @@
 ### Скачивание, установка и запуск проекта:
 Установка через git: 
 ```
-git clone https://github.com/maximmc911/fishCimpany.git
+git clone https://github.com/maximmc911/fishCompany.git
  ```
 Скачивание модулей
 ```
