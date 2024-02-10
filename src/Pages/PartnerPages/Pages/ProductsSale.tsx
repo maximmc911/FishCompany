@@ -5,8 +5,8 @@ const ProductsSale = () => {
   let exampleSalesman = true;
   return (
     <>
-    <h1 className='p-5 text-2xl'>Мои товары</h1>
-    <ProductPage props={exampleSalesman} />
+      <h1 className='p-5 text-2xl'>Мои товары</h1>
+      <ProductPage props={exampleSalesman} />
 
     </>
   )

@@ -8,9 +8,11 @@
  На странице документации описаны папки: 
  * exampleData
  * footer
+ * graphics
  * navbar
  * pushImage
  * randomGenerator
+ * table
 
 ## [src/components/UI](./pages/UI_component.md)
 
