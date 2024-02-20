@@ -17,6 +17,9 @@ import { MdOutlineDangerous } from "react-icons/md";
 import { FaQuestion } from "react-icons/fa"; 
 import { MdOutlineSettingsBackupRestore } from "react-icons/md";
 import { FaEnvelope } from "react-icons/fa";
+import { TbReport } from "react-icons/tb";
+import { MdOutlineSettingsApplications } from "react-icons/md";
+import { GiNotebook } from "react-icons/gi";
 const Icons = ({props, color, size}: any) => {
   if (color == undefined) {
     color = `white`
@@ -48,6 +51,9 @@ const Icons = ({props, color, size}: any) => {
     {(props == `вопрос`) ? (  <FaQuestion size={20} color={color} />) : null } 
     {(props == `восстановить`) ? (  <MdOutlineSettingsBackupRestore size={25} color={color} />) : null } 
     {(props == `почта2`) ? (  <FaEnvelope size={25} color={color} />) : null } 
+    {(props == `отчеты`) ? (  <TbReport  size={25} color={color} />) : null } 
+    {(props == `заявки`) ? (  <MdOutlineSettingsApplications  size={25} color={color} />) : null } 
+    {(props == `заметки`) ? (  <GiNotebook  size={25} color={color} />) : null } 
     
     </>
   )

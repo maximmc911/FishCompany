@@ -92,8 +92,14 @@ for (let index = 0; index < example.length; index++) {
 
 
 ## 4. [navbar](../../src/components/navbar)
+
+
 ## 5. [pushImage](../../src/components/pushImage)
+
+
 ## 6. [randomGenerator](../../src/components/randomGenerator)
+
+
 ## 7. [table](../../src/components/table)
 Компонент был интегрирован из библиотеки ```Ant design```
 

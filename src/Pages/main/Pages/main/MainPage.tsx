@@ -1,16 +1,16 @@
 import Module from "../../../../draftComponents/module"
 
-
+import  img  from "../../../../../public/Not_Img.jpeg";
 
 
 const MainPage = () => {
   return (
     <>
-<Module/>
+{/* <Module/> */}
 
 
     {/* !CONTENT START  РАЗБЛОКИРОВАТЬ ПО ЗАВЕРШЕНИЮ РАБОТЫ!!!!!! NOT DELETE */}
-     {/*  <h1 className='mt-2 text-2xl text-center'> О нас</h1>
+      <h1 className='mt-2 text-2xl text-center'> О нас</h1>
       <div className="flex flex-wrap gap-10 p-5 ">
         <div className="flex gap-10">
           <img src={img} alt="" className='w-56' />
@@ -27,7 +27,7 @@ const MainPage = () => {
           <img src={img} alt="" className='w-56' />
 
         </div>
-      </div> */}
+      </div>  
           {/* !CONTENT END  РАЗБЛОКИРОВАТЬ ПО ЗАВЕРШЕНИЮ РАБОТЫ!!!!!! NOT DELETE */}
     </>
   )

@@ -25,7 +25,7 @@ const InfoPerson = ({props}: any) => {
       
     <h1 className='p-2 mt-5 text-lg text-center border-b-2 border-blue-800'>Контакты</h1>
    <div className="flex flex-wrap gap-10">
-    <h1 className='pt-1 mt-5 text-xl'>Телефон: +7<span>{props.contacts.tel}</span> </h1>
+    <h1 className='pt-1 mt-5 text-xl'>Телефон: +7<span>{formatCurrency(props.contacts.tel)}</span> </h1>
     <h1 className='pt-1 mt-5 text-xl'>E-mail: <span>{props.contacts.email}</span></h1>
    </div>
    

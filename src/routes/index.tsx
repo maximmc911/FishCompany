@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 import NotFound from "../Pages/404/NotFound"
 import Main from "../Pages/main/Main"
-import AdminAuth from "../Pages/admin/AdminAuth"
+import AdminAuth from "../Pages/adminAuth/AdminAuth"
 import { routesMain } from '../Pages/main/routes/index'
 import { makeRoutes } from '../interfaces/interface'
 import PartnerAuth from "../Pages/main/Pages/Pages_partner/PartnerAuth"
